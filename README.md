@@ -8,7 +8,7 @@ Currently in development. Run the below command to run it in a development envir
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 Currently, the api is being worked upon so only the `/api/*` routes are implemented.
 

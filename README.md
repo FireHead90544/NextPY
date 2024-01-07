@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+NextPY - An open source anime streaming and downloading platform based on [SenPY](https://github.com/FireHead90544/SenPY) written in NextJS + TypeScript
 
 ## Getting Started
 
-First, run the development server:
+Currently in development. Run the below command to run it in a development environment.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Currently, the api is being worked upon so only the `/api/*` routes are implemented.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## API Routes
 
-## Learn More
+Subjected to changes*
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Description | Method | Query Parameters |
+| :--- | :--: | :--: | ---: |
+|`/api/` | API Homepage | GET | - |
+|`/api/anime-search` | Search for anime | GET | `q` or `query` - Search query |
+|`/api/get-anime-episodes` | Get all episode available for an anime | GET | `id` - Anime ID |
+|`/api/get-episode` | Get the link to a particular episode | GET | `id` - Anime ID, `ep` - Episode Number |
+|`/api/get-download-links` | Get download links for different qualities available | GET | `ep` - Particular Episode |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## What's Next?
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next is a JS framework lmao. JK. I'm planning to work on this occassionally. Can't gurantee a smooth development. It's more like I'm working on this since I'm learning NextJS/TS and I plan to finish it at some point of time.

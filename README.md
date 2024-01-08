@@ -16,13 +16,13 @@ Currently, the api is being worked upon so only the `/api/*` routes are implemen
 
 Subjected to changes*
 
-| Route | Description | Method | Query Parameters |
+| Route (Status) | Description | Method | Query Parameters |
 | :--- | :--: | :--: | ---: |
-|`/api/` | API Homepage | GET | - |
-|`/api/anime-search` | Search for anime | GET | `q` or `query` - Search query |
-|`/api/get-anime-episodes` | Get all episode available for an anime | GET | `id` - Anime ID |
-|`/api/get-episode` | Get the link to a particular episode | GET | `id` - Anime ID, `ep` - Episode Number |
-|`/api/get-download-links` | Get download links for different qualities available | GET | `ep` - Particular Episode |
+| `/api/` ✅ | API Homepage | GET | - |
+| `/api/anime-search` ✅ | Search for anime | GET | `q` or `query` - Search query |
+| `/api/get-anime-episodes` ✅ | Get all episode available for an anime | GET | `id` - Anime ID |
+| `/api/get-episode` ❌ | Get the link to a particular episode | GET | `id` - Anime ID, `ep` - Episode Number |
+| `/api/get-download-links` ❌ | Get download links for different qualities available | GET | `ep` - Particular Episode |
 
 
 ## What's Next?

@@ -2,9 +2,10 @@ import { NextRequest } from "next/server";
 import { load } from "cheerio";
 
 export async function GET(request: NextRequest) {
+    // TODO: Add Filters
 	const query = request.nextUrl.searchParams.get("q") || request.nextUrl.searchParams.get("query");
     if (!query) { return Response.json({ query, found: 0, results: [] })};
-    
+
 	const baseUrl = process.env.ANITAKU_BASE_URL;
 	const resp = await fetch(`${baseUrl}/search.html?keyword=${query}`);
 	const body = await resp.text();

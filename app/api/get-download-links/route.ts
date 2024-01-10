@@ -14,7 +14,7 @@ const BASE = process.env.VERCEL_URL ? "https://" + process.env.VERCEL_URL : "htt
 export async function GET(request: NextRequest){
     const gogoanime= request.nextUrl.searchParams.get("gogoanime");
     const auth = encodeURIComponent(request.nextUrl.searchParams.get("auth")!);
-    if (!gogoanime || !auth){ return Response.json({ error: "gogoanime & auth parameters missing!" }) }
+    if (!gogoanime || !auth){ return Response.json({ error: "gogoanime & auth parameters missing!" }) };
     
     const id = request.nextUrl.searchParams.get("id");
     let _ep = request.nextUrl.searchParams.get("ep");
@@ -32,8 +32,8 @@ export async function GET(request: NextRequest){
     const linkresp = await fetch(`${baseUrl}/${episode_page.replace('.', '-')}`, { headers: { cookie: Object.entries(cookies).map(([k, v]) => `${k}=${v}`).join("; ") } });
     const data = await linkresp.text();
     const $ = load(data);
-    const qualities: { [key: string]: Promise<string | null> | string | null} = {}
-    let linkscontainer = $("#wrapper_bg > section > section.content_left > div > div.anime_video_body > div.list_dowload > div > a")
+    const qualities: { [key: string]: Promise<string | null> | string | null} = {};
+    let linkscontainer = $("#wrapper_bg > section > section.content_left > div > div.anime_video_body > div.list_dowload > div > a");
     
     linkscontainer.map((i, r) => {
         const link = $(r).attr("href")?.trim();

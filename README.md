@@ -21,8 +21,8 @@ Subjected to changes*
 | `/api/` ✅ | API Homepage | GET | - |
 | `/api/anime-search` ✅ | Search for anime | GET | `q` or `query` - Search query |
 | `/api/get-anime-episodes` ✅ | Get all episode available for an anime | GET | `id` - Anime ID |
-| `/api/get-episode` ❌ | Get the link to a particular episode | GET | `id` - Anime ID, `ep` - Episode Number |
-| `/api/get-download-links` ❌ | Get download links for different qualities available | GET | `ep` - Particular Episode |
+| `/api/get-cookies` ❌ | Get the authentication cookies | GET | `email` - Anitaku Email, `password` - Anitaku Password |
+| `/api/get-download-links` ✅ | Get download links for different qualities available for an anime episode | GET | `id` - Anime ID, `ep` - Particular Episode, `auth`, `gogoanime` - Authentication Cookies |
 
 
 ## What's Next?

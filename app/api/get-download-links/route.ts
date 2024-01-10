@@ -12,6 +12,10 @@ interface EpisodesResponse{
 const BASE = process.env.VERCEL_URL ? "https://" + process.env.VERCEL_URL : "http://localhost:3000";
 
 export async function GET(request: NextRequest){
+    const gogoanime= request.nextUrl.searchParams.get("gogoanime");
+    const auth = encodeURIComponent(request.nextUrl.searchParams.get("auth")!);
+    if (!gogoanime || !auth){ return Response.json({ error: "gogoanime & auth parameters missing!" }) }
+    
     const id = request.nextUrl.searchParams.get("id");
     let _ep = request.nextUrl.searchParams.get("ep");
     const ep: number | null = _ep !== null ? parseFloat(_ep) : null;
@@ -23,7 +27,7 @@ export async function GET(request: NextRequest){
     if (!episode_page){ return Response.json({ id, ep, qualities: {} }) };
 
     const baseUrl = process.env.ANITAKU_BASE_URL;
-    const cookies = { auth: process.env.ANITAKU_AUTH, gogoanime: process.env.ANITAKU_GOGOANIME };
+    const cookies = { gogoanime, auth };
 
     const linkresp = await fetch(`${baseUrl}/${episode_page.replace('.', '-')}`, { headers: { cookie: Object.entries(cookies).map(([k, v]) => `${k}=${v}`).join("; ") } });
     const data = await linkresp.text();
@@ -43,7 +47,7 @@ export async function GET(request: NextRequest){
     Object.keys(qualities).forEach(async (key) => {
         if (qualities[key] instanceof Promise) {
         const result: any = await qualities[key];
-        qualities[key] = result instanceof Promise ? result : result.replace(result.split("&title=")[1], `&title=EP.${ep}.${key}_${id.replace('-', '_')}.mp4`);
+        qualities[key] = result instanceof Promise ? result : (result===null ? result : result.replace(result.split("&title=")[1], `&title=EP.${ep}.${key}_${id.replace('-', '_')}.mp4`));
         }
     });
     await Promise.allSettled(Object.values(qualities));

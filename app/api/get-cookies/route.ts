@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { load } from "cheerio";
 
+// Will be finished later
 export async function GET(request: NextRequest) {
     const email = request.nextUrl.searchParams.get("email");
     const password = request.nextUrl.searchParams.get("password");

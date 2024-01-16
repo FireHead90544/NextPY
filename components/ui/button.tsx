@@ -19,6 +19,7 @@ const buttonVariants = cva(
           "bg-stone-100 text-stone-900 shadow-sm hover:bg-stone-100/80 dark:bg-stone-800 dark:text-stone-50 dark:hover:bg-stone-800/80",
         ghost: "hover:bg-stone-100 hover:text-stone-900 dark:hover:bg-stone-800 dark:hover:text-stone-50",
         link: "text-stone-900 underline-offset-4 hover:underline dark:text-stone-50",
+        ghosty: "hover:text-stone-900 dark:hover:text-stone-50"
       },
       size: {
         default: "h-9 px-4 py-2",

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export function Header() {
   return (
-    <div className="flex justify-between my-12">
+    <div className="flex justify-between mt-12 pb-5">
       <Link href="/">
         <h1 className="font-semibold text-3xl">
             <span className="font-semibold">NextPY</span>

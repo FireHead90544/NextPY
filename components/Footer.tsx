@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa'
 
 export function Footer() {
   return (
-    <div className='pt-5 mb-12'>
+    <div className='pt-5 mb-8'>
         <hr className='border-t border-stone-200 dark:border-stone-800'/>
         <div className='flex justify-between mt-2'>
             <div className='space-x-2'>

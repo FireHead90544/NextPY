@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
+import { Separator } from './ui/separator'
 
 export function Footer() {
   return (
     <div className='pt-5 mb-8'>
-        <hr className='border-t border-stone-200 dark:border-stone-800'/>
+        <Separator className='my-4' />
         <div className='flex justify-between mt-2'>
             <div className='space-x-2'>
                 <span className='animate-wave inline-block origin-[70%_70%]'>👋</span>

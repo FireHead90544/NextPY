@@ -9,7 +9,7 @@ export function Header() {
         <h1 className="font-semibold text-3xl">
             <span className="font-semibold">NextPY</span>
         </h1>
-        <h1 className="font-thin">Stream & Download Animes</h1>
+        <h1 className="font-[150]">Stream & Download Animes</h1>
       </Link>
       <ThemeToggle />
     </div>

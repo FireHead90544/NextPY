@@ -26,9 +26,11 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<div className='mx-auto px-8 max-w-screen-sm'>
+					<div className='flex flex-col mx-auto px-6 sm:px-8 h-screen max-w-screen-sm'>
 						<Header />
-						{children}
+						<div className="flex-1">
+							{children}
+						</div>
 						<Footer />
 					</div>
 				</ThemeProvider>

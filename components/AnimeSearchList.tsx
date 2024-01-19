@@ -2,6 +2,6 @@ import React from 'react'
 
 export function AnimeSearchList() {
   return (
-    <div>AnimeSearchList</div>
+    <div>AnimeSearchList - Yet to finish</div>
   )
 }

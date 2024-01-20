@@ -2,6 +2,6 @@ import React from 'react'
 
 export function AnimeSearchList() {
   return (
-    <div>AnimeSearchList - Yet to finish</div>
+    <div className='pt-2'>AnimeSearchList - ScrollArea Component Sux, Not my fault</div>
   )
 }

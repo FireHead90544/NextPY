@@ -3,7 +3,7 @@ import { AnimeSearchList } from "@/components/AnimeSearchList";
 
 export default function Home() {
   return (
-		<div className="flex flex-col pt-4">
+		<div className="h-full flex flex-col pt-4">
 			<SearchAnime />
 			<AnimeSearchList />
 		</div>

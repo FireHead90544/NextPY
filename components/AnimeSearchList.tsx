@@ -5,7 +5,7 @@ import { AnimeCard } from '@/components/AnimeCard'
 export function AnimeSearchList() {
   return (
 		<div className="pt-2 flex h-full rounded-md border space-x-2">
-      {/* Test Component */}
+			{/* Test Component */}
 			<AnimeCard
 				released={null}
 				name="Ore dake Level Up na Ken"

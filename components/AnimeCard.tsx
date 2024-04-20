@@ -17,7 +17,7 @@ interface AnimeCardProps {
 }
 
 export function AnimeCard({ name, id, image, released }: AnimeCardProps) {
-	// TODO: Mobile Devices: Convert Flex-Col to Flex-Row Based Layout
+	// TODO: Mobile Devices: Convert Flex-Col to Flex-Row Based Layout (lost the hope)
 	return (
 		<Card className="w-72 rounded-md p-4 space-y-3">
 			<Image
